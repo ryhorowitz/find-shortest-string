@@ -23,8 +23,19 @@ if (require.main === module) {
   console.log("=>", findShortestString(['flower', 'juniper', 'lily', 'dadelion']));
 
   // BENCHMARK HERE
-}
 
+
+}
+i = 1000
+const start = Date.now()
+while (i > 0) {
+
+  findShortestString(['aaa', 'a', 'bb'])
+  // console.log(i)
+  i--
+}
+const avg = (Date.now() - start) / 1000
+console.log('benchmark is', avg)
 module.exports = findShortestString;
 
 // Please add your pseudocode to this file
